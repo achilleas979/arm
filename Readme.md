@@ -70,7 +70,7 @@ See also the list of [contributors](https://github.com/your/project/contributors
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Publications
-1. Achilleas Achilleos, Kyriaki Georgiou, Christos Markides, Andreas Constantinides and George Papadopoulos, "Adaptive Runtime Middleware: Everything as a Service",	9th International Conference on Computational Collective Intelligence, (ICCI 2017), Springer.
+```1. Achilleas Achilleos, Kyriaki Georgiou, Christos Markides, Andreas Constantinides and George Papadopoulos, "Adaptive Runtime Middleware: Everything as a Service",	9th International Conference on Computational Collective Intelligence, (ICCI 2017), Springer.
 
 ## Acknowledgments
 

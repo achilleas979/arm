@@ -39,7 +39,7 @@ When developing another ARM Java OSGi plugin (in the future) only the following 
 
 6: Copy the following code and replace the loaded Activator class code. The two important parts to notice is the start and the stop methods that basically register the OpenWeather service class when the plugin is started and unregister it when the plugin is stopped. Ignore the errors since the OpenWeather service class will be created in the next step. Spend some minutes to study the code.
 
-```
+``` Java
 package osgi_openweather;
 
 import org.osgi.framework.BundleActivator;

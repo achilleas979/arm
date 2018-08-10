@@ -215,7 +215,7 @@ To proceed copy and paste the following code in the WebClient.html file.
 ```
 
 8:  Right click on WebClient.html, go to Run As-> Run on Server, make sure Apache Tomcat Server 7.0 is selected & click Finish. Copy http://localhost:8080/OpenWeatherHueWebClient/WebClient.html and open it in Chrome for optimal experience. You should see a WebClient UI similar to the below:
-
+![WebClient App Image](https://github.com/achilleas979/arm/blob/master/images/webapp.png)
 
 Type in the first panel London and click the GetWeatherByCityName button, which should cause the light to turn on if current temperature is >25 degrees. If not try another city name. Type in the second panel Oslo and NO in the text fields and click the GetWeatherByCityNameCountryCode button, which should cause the light to turn off if current temperature is <25 degrees. If not try another city name and country code.
 
