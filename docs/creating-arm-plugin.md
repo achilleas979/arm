@@ -83,7 +83,7 @@ The important parts to notice are the annotations @ClassDescription, @MethodDesc
   
 Ignore the errors since they will be resolved in the next two steps.
 
-```
+``` Java
 package osgi_openweather;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -147,7 +147,7 @@ public class OpenWeather {
  
 9: We have to define now the Helper.java class that actually implements the two calls to the OpenWeather API. Right click on the osgi_openweather package and go to New-> Class, type Helper and click Finish. Replace the loaded code with:
 
-```
+``` Java
 package osgi_openweather;
 
 import java.io.BufferedReader;
@@ -225,7 +225,7 @@ Spend some minutes to study the code. The code simply invokes the OpenWeather AP
 
 10: The next step involves creating the XML file needed by the ARM middleware to find the main OpenWeather service class that contains the annotations to generate automatically the REST API methods and their corresponding developer documentation. Right click on the src folder and go to New-> Other type File and click Next and then type osgi_plugin_def.xml in the filename. Click Finish, click on the source tab at the bottom of the loaded XML file and add the content below that defines the main service class path and the JAR that will be exported for the OpenWeather plugin.
 
-```
+``` XML
 <bundle-definition>
     <fullname>
         osgi_openweather.OpenWeather
