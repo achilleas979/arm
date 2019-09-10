@@ -1,0 +1,41 @@
+	/*
+	var source = new SSE("http://localhost:9050/services/events");
+	source.addEventListener('',function(e) {
+	  console.log('System status is now: ' + e.data);
+	  document.getElementById(resultId).innerHTML = e.data;
+	});
+	source.stream();*/
+	
+	///me xhr 
+	/*
+	if (!!window.EventSource) {
+		  var source = new EventSource('http://localhost:9050/services/events');
+		} else {
+		  // Result to xhr polling :(
+		}
+	source.addEventListener('message', function(e) {
+		  console.log(e.data);
+		}, false);
+
+		source.addEventListener('open', function(e) {
+		  // Connection was opened.
+			var datas = e.data;
+			 document.getElementById(resultId).innerHTML = datas; 
+		}, false);
+
+		source.addEventListener('error', function(e) {
+		  if (e.readyState == EventSource.CLOSED) {
+		    // Connection was closed.
+		  }
+		}, false);*/
+	
+	/*function (resultId) {
+	var source = new SSE("http://localhost:9050/services/events");
+	source.addEventListener('', function(e) {
+	  // Assuming we receive JSON-encoded data payloads:
+	  var payload = JSON.parse(e.data);
+	  //console.log(payload);
+	  document.getElementById("resultSSE").innerHTML = payload;
+	});
+	source.stream();
+	}*/

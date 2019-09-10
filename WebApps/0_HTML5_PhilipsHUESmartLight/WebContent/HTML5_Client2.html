@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>HTML5 Client for Philips HUE Smart Light</title>
+
+<script type="text/javascript" src="Scripts/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="Scripts/Client_JS.js"></script>
+<link type="text/css" rel="stylesheet" href="Style/Client_CSS.css" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-md-12">
+				<h1>HTML5 Client for Philips HUE Smart Light</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-12">
+				<p class="text-muted">SmartPhilipsHUELight is an OSGi bundle for
+					communicating with a Philips HUE Light.</p>
+				<p class="text-muted">This OSGi bundle implements four basic
+					functionalities for interacting with the smart light.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h2 class="panel-title">1. Turn Light On</h2>
+
+					</div>
+					<div class="panel-body">
+						<p>
+							<i>Description:</i> Invoking this will turn the smart light ON.
+						</p>
+						<button type="button" id="TurnLightOnBtn" name="Turn Light On"
+							onclick="Javascript:TurnLightOn('TurnLightOnResult')"
+							class="btn btn-primary" role="button">Turn Light On</button>
+					</div>
+					<div class="panel-footer">
+						<label><i>Result: </i></label> <span id="TurnLightOnResult"></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h2 class="panel-title">2. Turn Light Off</h2>
+					</div>
+					<div class="panel-body">
+						<p>
+							<i>Description:</i> Invoking this will turn the smart light Off.
+						</p>
+						<button type="button" id="TurnLightOffBtn" name="Turn Light Off"
+							onclick="Javascript:TurnLightOff('TurnLightOffResult')"
+							class="btn btn-primary" role="button">Turn Light Off</button>
+					</div>
+					<div class="panel-footer">
+						<label><i>Result: </i></label> <span id="TurnLightOffResult"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h2 class="panel-title">3. Dim Light</h2>
+					</div>
+					<div class="panel-body">
+						<p>
+							<i>Description:</i> Invoking this will dim the smart light.
+						</p>
+						<button type="button" id="DimLightBtn" name="Dim Light"
+							onclick="Javascript:DimLight('DimLightResult')"
+							class="btn btn-primary" role="button">Dim Light</button>
+					</div>
+					<div class="panel-footer">
+						<label><i>Result: </i></label> <span id="DimLightResult"></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h2 class="panel-title">4. Set Light Level</h2>
+					</div>
+					<div class="panel-body">
+						<p>
+							<i>Description:</i> Invoking this will set the smart light level.
+						</p>
+						<span>Light Level: </span> <input type="text" id="lightLevelInput"
+							value="" style="width: 50px; height: 25px" /> <br /> <br />
+						<button type="button" id="SetLightLevelBtn" name="Set Light Level"
+							onclick="Javascript:SetLightLevel('SetLightLevelResult', 'lightLevelInput')"
+							class="btn btn-primary" role="button">Set Light Level</button>
+					</div>
+					<div class="panel-footer">
+						<label><i>Result: </i></label> <span id="SetLightLevelResult"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h2 class="panel-title">5. Set Light Color</h2>
+					</div>
+					<div class="panel-body">
+						<p>
+							<i>Description:</i> Invoking this will set the smart light color.
+							<br />This is a wrapping value between 0 and 65535. Both 0 and
+							65535 are red, 25500 is green and 46920 is blue.
+						</p>
+						<span>Light Color: </span> 
+						<input type="text" id="lightColorInput"
+							value="14956" style="width: 50px; height: 25px" disabled="disabled"/> <br />
+							<input
+							type="range" min="0" max="65535" value="14956" step="100"
+							onchange="showValue(this.value, 'lightColorInput')" /> 
+						<button type="button" id="SetLightColorBtn" name="Dim Light"
+							onclick="Javascript:SetLightColor('SetLightColorResult', 'lightColorInput')"
+							class="btn btn-primary" role="button">Set Light Color</button>
+					</div>
+					<div class="panel-footer">
+						<label><i>Result: </i></label> <span id="SetLightColorResult"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function showValue(newValue, elementId) {
+			document.getElementById(elemendId).value = newValue;
+		}
+	</script>
+</body>
+</html>

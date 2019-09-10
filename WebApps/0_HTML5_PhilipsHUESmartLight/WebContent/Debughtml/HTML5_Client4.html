@@ -1,0 +1,37 @@
+       <!doctype html>
+        <html>
+          <head>
+            <title>OPi Sensor SSE</title>
+			<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+            <meta content="utf-8" http-equiv="encoding">
+          </head>
+          <body>
+            <h1>OPi Sensor</h1>
+            <p><span id="out1"></span></p>
+         
+          
+			
+			
+			<script>
+			var source1 = new EventSource('http://localhost:9050/services/MotionSensor/getServerSentEvents');
+                function sse1() {
+                    source1.addEventListener('motion', function(e) {
+						console.log('System status is now: ' + e.data);
+                        document.getElementById("out1").innerHTML = e.data;
+                    });
+                }
+                
+               
+                
+              
+            </script>
+			<button type="button" onclick = "Javascript:source1.close()">Disable Motion</button> 
+			
+			
+			<script>
+			sse1();
+			</script>
+			
+          </body>
+        </html>
+  

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>WebClient</title>
+
+<script type="text/javascript" src="libraries/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="libraries/WebClient.js"></script>
+<link type="text/css" rel="stylesheet" href="libraries/WebClient.css" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <h1>WebClient - SmartPhilipsHUELight && OpenWeather</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <p class="text-muted">WebClient for interacting with SmartPhilipsHUELight && OpenWeather.</p>
+                <p class="text-muted">This simple web app allows calling OpenWeather ARM plugin REST API and 
+                if the city temperature returned is >30celsius it turns on the Hue light else turns it off.</p>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-xs-12 col-md-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">1. GetWeatherByCityName</h2>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            <i>Description:</i> Invoking OpenWeather API by City Name will return the temp in Celsius.
+                        </p>
+                        <span>City Name: </span> 
+                        <input type="text" id="GetWeatherByCityNameInput" value="" style="width: 100px; height: 25px" /> <br /> 
+                        <br />
+                        <button type="button" id="GetWeatherByCityNameBtn" name="GetWeatherByCityName"
+                            onclick="Javascript:GetWeatherByCityName('GetWeatherByCityNameResult', 'GetWeatherByCityNameInput')"
+                            class="btn btn-primary" role="button">GetWeatherByCityName</button>
+                    </div>
+                    <div class="panel-footer">
+                        <label><i>Result: </i></label> <span id="GetWeatherByCityNameResult"></span>
+                    </div>
+                </div>
+            </div>
+        
+        <div class="col-xs-12 col-md-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">2. GetWeatherByCityNameCountryCode</h2>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            <i>Description:</i> Invoking OpenWeather API by City Name will return the temp in Celsius.
+                        </p>
+                        <span>CityName, e.g., London: </span> 
+                        <input type="text" id="CityNameInput" value="" style="width: 100px; height: 25px" /> <br /> <br />
+                        <span>CountryCode, e.g., UK: </span> 
+                        <input type="text" id="CountryCodeInput" value="" style="width: 50px; height: 25px" /> <br /> <br />
+                        <button type="button" id="GetWeatherByCityNameCountryCodeBtn" name="GetWeatherByCityNameCountryCode"
+                            onclick="Javascript:GetWeatherByCityNameCountryCode('GetWeatherByCityNameCountryCodeResult', 'CityNameInput', 'CountryCodeInput')"
+                            class="btn btn-primary" role="button">GetWeatherByCityNameCountryCode</button>
+                    </div>
+                    <div class="panel-footer">
+                        <label><i>Result: </i></label> <span id="GetWeatherByCityNameCountryCodeResult"></span>
+                    </div>
+                </div>
+            </div>
+        <div class="col-xs-12 col-md-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">3. SmartPhillipsHue Status</h2>
+                    </div>
+                    <div class="panel-footer">
+                        <label><i>Result: </i></label> <span id="HueLightResult"></span> <br />
+                        <iframe width="370" height="280" src="http://10.16.22.5:8081" scrolling="no"></iframe>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
+</body>
+</html>

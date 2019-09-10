@@ -1,0 +1,71 @@
+       <!doctype html>
+        <html>
+          <head>
+            <title>OPi Sensor SSE</title>
+			<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+            <meta content="utf-8" http-equiv="encoding">
+          </head>
+          <body>
+            <h1>OPi Sensor</h1>
+            <p><span id="out1"></span></p>
+         
+             <p><span id="out2"></span></p>
+       
+             <p><span id="out3"></span></p>
+			
+			<!--
+			<script>
+                function sse() {
+                    var source = new EventSource('http://localhost:9050/services/MySensor/getServerSentEvents');
+                    source.addEventListener('motion', function(e) {
+						console.log('System status is now: ' + e.data);
+                        document.getElementById("out1").innerHTML = e.data;
+                    });
+                }
+                
+                sse();
+            </script>
+			-->
+			<script>
+			var source1 = new EventSource('http://localhost:9050/services/MotionSensor/getServerSentEvents');
+                function sse1() {
+                    
+                    source1.addEventListener('motion', function(e) {
+						console.log('System status is now: ' + e.data);
+                        document.getElementById("out1").innerHTML = e.data;
+                    });
+                }
+                
+               
+            var source2 = new EventSource('http://localhost:9050/services/DistanceSensor/getServerSentEvents');
+                function sse2() {
+                    
+                    source2.addEventListener('distance', function(e) {
+						console.log('System status is now: ' + e.data);
+                        document.getElementById("out2").innerHTML = e.data;
+                    });
+                }
+            var source3 = new EventSource('http://localhost:9050/services/LightSensor/getServerSentEvents');     
+                function sse3() {
+                    
+                    source3.addEventListener('light', function(e) {
+						console.log('System status is now: ' + e.data);
+                        document.getElementById("out3").innerHTML = e.data;
+                    });
+                }
+                
+              
+            </script>
+			<button type="button" onclick = "Javascript:source1.close()">Disable Motion</button> 
+			<button type="button" onclick = "Javascript:source2.close()">Disable Distance</button> 
+			<button type="button" onclick = "Javascript:source3.close()">Disable Light</button> 
+			
+			<script>
+			sse1();
+            sse2();
+            sse3();
+			</script>
+			
+          </body>
+        </html>
+  
