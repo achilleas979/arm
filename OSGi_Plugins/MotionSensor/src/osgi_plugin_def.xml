@@ -1,0 +1,8 @@
+<bundle-definition>
+	<fullname>
+		osgi_MotionSensor.MotionSensor
+	</fullname>
+	<filename>
+		MotionSensor_1.0.0.jar
+	</filename>
+</bundle-definition>

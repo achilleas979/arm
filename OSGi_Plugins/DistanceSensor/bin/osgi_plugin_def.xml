@@ -1,0 +1,8 @@
+<bundle-definition>
+	<fullname>
+		osgi_DistanceSensor.DistanceSensor
+	</fullname>
+	<filename>
+		DistanceSensor_1.0.0.jar
+	</filename>
+</bundle-definition>

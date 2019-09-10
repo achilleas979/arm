@@ -1,0 +1,8 @@
+<bundle-definition>
+    <fullname>
+        osgi_openweather.OpenWeather
+    </fullname>
+    <filename>
+        OpenWeather_1.0.0.jar
+    </filename>
+</bundle-definition>

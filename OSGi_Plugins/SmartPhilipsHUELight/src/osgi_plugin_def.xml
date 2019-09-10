@@ -1,0 +1,8 @@
+<bundle-definition>
+	<fullname>
+		osgi_SmartPhilipsHUELight.SmartPhilipsHUELight
+	</fullname>
+	<filename>
+		SmartPhilipsHUELight_2.0.2.0.jar
+	</filename>
+</bundle-definition>

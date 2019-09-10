@@ -1,0 +1,8 @@
+<bundle-definition>
+	<fullname>
+		osgi_LightSensor.LightSensor
+	</fullname>
+	<filename>
+		LightSensor_1.0.0.jar
+	</filename>
+</bundle-definition>
