@@ -1,0 +1,1 @@
+Place in this folder the plugins.
